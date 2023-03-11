@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f7fafc;
+}
+.header {
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-opacity {
+  color: #0d6efd;
+  font-size: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-opacity > span {
+  color: #8cb7f5;
+}
+.header-wrapper {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  padding: 31px 0px;
+  column-gap: 11px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.nav-links > a {
+  color: #8b96a5;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.nav-links > a:hover {
+  color: #0d6efd;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+.nav-links > p {
+  font-size: 14px;
+  color: #8b96a5;
+  padding-top: 5px;
+}
+.filter-wrapper {
+  border: 1px solid #dee2e7;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.filter-btns {
+  display: flex;
+  justify-content: right;
+  column-gap: 5px;
+}
+.filter-btns > button {
+  padding: 11px;
+  border: 1px solid #dee2e7;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.filter-btns > button:hover {
+  border: 1px solid #0d6efd;
+}
+.active {
+  border: 1px solid #0d6efd !important;
+}
+.main-section {
+  display: grid;
+  grid-template-columns: 234px 1fr;
+  margin-top: 20px;
+  column-gap: 40px;
+}
+.detail-filter {
+  border-top: 1px solid #eaeaea;
+}
+.title {
+  font-weight: bold;
+}
+.filter-item {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+.filter-name > p {
+  font-size: 16px;
+  margin: 0;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+.products-wrapper {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 8px auto;
+  border: 1px solid #dee2e7;
+  display: flex;
+  column-gap: 20px;
+}
+.products-title > p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.products-price > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.products-img > img {
+  max-width: 100%;
+  width: 100%;
+}
+.products-img {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 25%;
+}
+.products-info {
+  width: 70%;
+}
+.product-item-info {
+  display: flex;
+  column-gap: 22px;
+  padding: 22px;
+  border: 1px solid #dee2e7;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.item-image {
+  width: 33%;
+  text-align: center;
+  border: 1px solid #dee2e7;
+  border-radius: 6px;
+  padding: 16px;
+}
+.item-info {
+  max-width: 430px;
+  width: 100%;
+
+}
+.item-description{
+  margin-top: 27px;
+}
+.btn-buy-btn > button {
+ 
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  background: linear-gradient(90deg, #127fff 0%, #0067ff 100%);
+  justify-content: center;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  transition: .2s;
+}
+.btn-buy-btn> button:hover{
+  background: linear-gradient(90deg, #a8cffc 0%, #68a4fd 100%);
+  border-radius: 6px;
+}
+.item-description{
+  border-bottom: 1px solid #E0E0E0; ;
+}
+.item-category{
+  border-bottom: 1px solid #E0E0E0;
+}
+.product-link > a{
+  color: #0067ff;
+  text-decoration: none;
+  transition: .2s;
+}
+.product-link > a:hover{
+  color: #61a0ff;
+  transition: .2s;
+}
+.item-category,
+.item-type,
+.item-material,
+.item-design {
+  color: #505050;
+}
+.subtitle{
+  color: #8B96A5;
+  font-size: 16px;
+  min-width: 75px;
+}
+.item-category,
+.item-type,
+.item-material,
+.item-design{
+  display: flex;
+  column-gap: 65px;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.item-info-description {
+  background-color: #fff;
+  border: 1px solid #dee2e7;
+  border-radius: 6px;
+  padding: 22px;
+  margin-top: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-image > img {
+  width: 100%;
+  max-width: 100%;
 }
