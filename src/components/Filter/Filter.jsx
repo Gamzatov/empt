@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Filter = ({ product, setFromLow, setToLow, toLow, fromLow }) => {
+export const Filter = ({ product, setFromLow, setToLow, toLow, fromLow, hideFilter, setHideFilter  }) => {
   console.log(
     product
       .map((el) => el.price)
@@ -17,6 +17,9 @@ export const Filter = ({ product, setFromLow, setToLow, toLow, fromLow }) => {
     setFromLow(false);
   };
 
+  const handleFilter = () =>{
+    setHideFilter(!hideFilter)
+  }
   return (
     <div className="filter-wrapper">
       <div className="filter-btns">
@@ -25,6 +28,9 @@ export const Filter = ({ product, setFromLow, setToLow, toLow, fromLow }) => {
         </button>
         <button onClick={handleToLow}  className={toLow ? 'active' : ''}>
           Price: High to Low <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <button onClick={handleFilter} className="mob-close">
+       {!hideFilter ? <ion-icon name='close-outline'></ion-icon> : <ion-icon className="mob-filter" name="filter-outline"></ion-icon>} 
         </button>
       </div>
     </div>

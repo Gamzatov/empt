@@ -77,7 +77,7 @@ function App() {
         <Navigation />
       
         <Routes>
-          <Route path='/' element={<Main products={data} brands={filterBrands} />}></Route>
+          <Route path='/empt' element={<Main products={data} brands={filterBrands} />}></Route>
           <Route path='/product/:id' element={<Product products={data} />} ></Route>
         </Routes>
 

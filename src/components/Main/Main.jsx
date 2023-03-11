@@ -10,10 +10,13 @@ export const Main = ({ products, brands }) => {
   const [product, setProduct] = React.useState(products);
   const [fromLow, setFromLow] = React.useState(true);
   const [toLow, setToLow] = React.useState(false);
+  const [hideFilter, setHideFilter] = React.useState(false);
 
   return (
     <>
       <Filter
+        setHideFilter={setHideFilter}
+        hideFilter={hideFilter}
         product={product}
         setToLow={setToLow}
         fromLow={fromLow}
@@ -26,6 +29,7 @@ export const Main = ({ products, brands }) => {
             brands={brands}
             brandName={brandName}
             setBrandName={setBrandName}
+            hideFilter={hideFilter}
           />
           <PriceRange
             minNum={minNum}

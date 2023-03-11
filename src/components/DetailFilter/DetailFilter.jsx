@@ -1,6 +1,6 @@
 import React from "react";
 
-export const DetailFilter = ({ brands, setBrandName, brandName }) => {
+export const DetailFilter = ({ brands, setBrandName, brandName, hideFilter }) => {
   const setBrandCheckbox = (e) => {
     
     if (e.target.checked) {
@@ -10,7 +10,7 @@ export const DetailFilter = ({ brands, setBrandName, brandName }) => {
     }
   };
   return (
-    <div className="detail-filter">
+    <div className={hideFilter ? 'none' : "detail-filter"}>
       <div className="brand-wrapper">
         <p className="title">Brands</p>
         {brands.map((el, index) => (
