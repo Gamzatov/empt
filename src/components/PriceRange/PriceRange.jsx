@@ -54,7 +54,7 @@ export const PriceRange = ({maxNum, minNum, setMinNum, setMaxNum, resetFilter, s
           }}
         />
       </Stack>
-      <ResetFilter  setResetFilter={setResetFilter} resetFilter={resetFilter}/>
+      {/* <ResetFilter  setResetFilter={setResetFilter} resetFilter={resetFilter}/> */}
     </div>
   );
 };
