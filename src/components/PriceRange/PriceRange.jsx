@@ -1,7 +1,8 @@
 import React from "react";
 import { Stack, Typography, Slider, TextField } from "@mui/material";
+import { ResetFilter } from "../ResetFilter/ResetFilter";
 
-export const PriceRange = ({maxNum, minNum, setMinNum, setMaxNum}) => {
+export const PriceRange = ({maxNum, minNum, setMinNum, setMaxNum, resetFilter, setResetFilter}) => {
   // const [minNum, setMinNum] = React.useState(0);
   // const [maxNum, setMaxNum] = React.useState(2500);
   const minmin = 0;
@@ -53,6 +54,7 @@ export const PriceRange = ({maxNum, minNum, setMinNum, setMaxNum}) => {
           }}
         />
       </Stack>
+      <ResetFilter  setResetFilter={setResetFilter} resetFilter={resetFilter}/>
     </div>
   );
 };

@@ -237,6 +237,14 @@ body {
 .none{
   display: none;
 }
+.btn-wrapper > button{
+  background-color: transparent;
+  color: #0067ff;
+  border: none;
+}
+.btn-wrapper{
+  margin-top: 20px;
+}
 
 @media(max-width:762px){
   .main-section{
