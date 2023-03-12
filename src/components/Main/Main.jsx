@@ -13,6 +13,16 @@ export const Main = ({ products, brands }) => {
   const [toLow, setToLow] = React.useState(false);
   const [hideFilter, setHideFilter] = React.useState(false);
   const [resetFilter, setResetFilter] = React.useState(false);
+  const [checked, setChecked] = React.useState([]);
+  const categories = [
+    // 'Lenovo',
+    // 'Samsung',
+    // 'Apple',
+    // 'Huawei',
+    // 'Pocco'
+  ];
+
+
   React.useEffect(() => {
     if (resetFilter) {
       setMinNum(0);
@@ -39,6 +49,9 @@ export const Main = ({ products, brands }) => {
             setBrandName={setBrandName}
             hideFilter={hideFilter}
             resetFilter={resetFilter}
+            categories={categories}
+            checked={checked}
+            setChecked={setChecked}
           />
           <PriceRange
             minNum={minNum}
@@ -58,6 +71,7 @@ export const Main = ({ products, brands }) => {
             maxNum={maxNum}
             brandName={brandName}
             products={products}
+            checked={checked}
           />
         </div>
       </div>

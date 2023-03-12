@@ -7,14 +7,28 @@ export const DetailFilter = ({
   brandName,
   hideFilter,
   resetFilter,
+  categories,
+  setChecked,
+  checked
+  
 }) => {
+
+  
   const setBrandCheckbox = (e) => {
     if (e.target.checked) {
       setBrandName(e.target.value);
     } else {
       setBrandName("");
     }
+    var updatedList = [...checked];
+    if (e.target.checked) {
+      updatedList = [...checked, e.target.value];
+    } else {
+      updatedList.splice(checked.indexOf(e.target.value), 1);
+    }
+    setChecked(updatedList);
   };
+  console.log('categories', checked)
   return (
     <div className={hideFilter ? "none" : "detail-filter"}>
       <div className="brand-wrapper">
@@ -27,7 +41,6 @@ export const DetailFilter = ({
                   onClick={setBrandCheckbox}
                   type="checkbox"
                   className="checkbox"
-                  checked={ false || resetFilter ? true : false}
                   value={el}
                 />
               </div>

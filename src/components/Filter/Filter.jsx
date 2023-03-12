@@ -1,13 +1,6 @@
 import React from "react";
 
 export const Filter = ({ product, setFromLow, setToLow, toLow, fromLow, hideFilter, setHideFilter  }) => {
-  console.log(
-    product
-      .map((el) => el.price)
-      .sort(function (a, b) {
-        return b - a;
-      })
-  );
   const handleFromLow = () => {
     setFromLow(!fromLow);
     setToLow(false);
